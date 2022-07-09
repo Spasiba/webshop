@@ -1,0 +1,31 @@
+.header{
+    padding: 54px 0 45px;
+}
+.header__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+}
+.header__links{
+    display:flex;
+    align-items: center;
+    column-gap: 45px;
+}
+.header__icon-call{
+    margin-right: 15px;
+}
+.active{
+    color: #6E9C9F;
+}
+.header_languageBtn{
+    width: 30px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 15px;
+    line-height: 138.9%;
+    text-align: center
+    
+}
+.activeBtn{
+    background: #6E9C9F;
+}

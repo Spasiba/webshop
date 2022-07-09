@@ -1,0 +1,26 @@
+.register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.form{
+    display:flex;
+    flex-direction:column;
+    row-gap: 20px;
+    width: 300px;
+}
+.form__btn{
+    border:none;
+    width: 50%;
+    background:#6E9C9F;
+    padding: 10px 20px;
+}
+.form__input{
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.register__login{
+     color:#6E9C9F
+}

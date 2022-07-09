@@ -1,0 +1,81 @@
+.shop{
+    padding: 194px 0 130px;
+
+}
+
+.shop__list{
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+}
+.shop__item{
+    padding: 19px 65px;
+    border: 1px solid #000000;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    margin: 114px 0 92px;
+    transition: .3s;
+    cursor: pointer ;
+}
+.shop__item:hover, .shop__itemActive{
+    transition: .3s;
+    background: black;
+    color: white;
+}
+
+.shop__row{
+    display: flex;
+    row-gap: 30px;
+    flex-wrap: wrap;
+}
+
+.shop__card{
+    width: calc(33.33333% - 20px);
+    text-align: center;
+}
+.shop__card-img{
+    height: 300px;
+
+}
+
+
+.shop__card-title{
+    font-family: 'Raleway';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 140%;
+letter-spacing: 0.02em;
+margin: 24px 0 7px;
+
+color: #000000;
+}
+.shop__card-price{
+    font-family: 'Raleway';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 140%;
+
+letter-spacing: 0.02em;
+
+color: #998E78;
+}
+.shop__button{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 17px;
+    line-height: 138.9%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    width: 120px;
+    height: 40px;
+    background: #6E9C9F;
+    border: 2px solid white;
+    cursor: pointer;
+    
+    color: white;
+}

@@ -1,0 +1,72 @@
+{
+    "header":{
+        "link1":"Main",
+        "link2":"Shop",
+        "link3":"About Brands",
+        "link4":"Contacts"
+    },
+    
+    "home": {
+        "firstScreen" :{
+            "title":"New arrivals <br/> this season",
+            "subtitle":"Sophisticated combinations and velvety <br/> shades - that's what you've been looking for <br/>  this season.Time to explore.",
+            "button":"Open Shop"
+        },
+        "CollectionScreen" :{
+            "title":"New Collection",
+            "card-title1":"T-Shirt USA",
+            "card-title2":"Swim-suit Glow",
+            "card-title3":"Sweatshirt Sweet"
+        }
+    },
+    "shop":{
+        "about":{
+            "title":"Shop",
+            "link1":"Main",
+            "link2":"Shop"
+        }
+    },
+    "contact":{
+        "about":{
+            "title":"Contact",
+            "link1":"Main",
+            "link2":"Contact"
+        }
+    },
+    "brands":{
+        "about":{
+            "title":"About brands",
+            "link1":"Main",
+            "link2":"About brands"
+        }
+    },
+    "product":{
+        "about":{
+            "title":"О бренде",
+            "link1":"Главная",
+            "link2":"О бренде"
+        },
+        "subtitle":"Related Products"
+    },
+    "cart":{
+        "about":{
+            "title":"Backet",
+            "link1":"Main",
+            "link2":"Backet"
+        }
+    },
+    "account":{
+        "about":{
+            "title":"Account",
+            "link1":"Main",
+            "link2":"Account"
+        }
+    },
+    "checkout":{
+        "about":{
+            "title":"Checkout",
+            "link1":"Main",
+            "link2":"Checkout"
+        }
+    }
+}

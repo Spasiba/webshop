@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+a,ul,li{
+    text-decoration: none;
+    list-style: none;
+    color: inherit
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+    width: 100%;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+.title{
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+    color: #000000;
+    margin-bottom: 26px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+@import "./Layout/Header/header.scss";
+@import "./page/Home/home.scss";
+@import "./page/Shop/shop.scss";
+@import "./page/Product/product.scss";
+@import "./page/Account/account.scss";
+@import "./page/Cart/cart.scss";
+@import "./page/checkout/checkout.scss";
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+@import "./page/Login/login.scss";
+@import "./page/Register/register.scss";

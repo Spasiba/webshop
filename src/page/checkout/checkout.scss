@@ -1,0 +1,29 @@
+
+.checkout__buyer-left{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.checkout__buyer-li{
+    display: flex;
+    width: 40%;
+   flex-direction: column;
+   row-gap: 10px;
+   margin-bottom: 20px;
+}
+
+.checkout__buyer-cart{
+ background: #6E9C9F;
+ color: white;
+}
+.checkout__buyer-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    
+}
+.checkout__buyer-input{
+    display: flex;
+   flex-direction: column;
+   row-gap: 40px;
+}
