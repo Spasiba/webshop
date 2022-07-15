@@ -108,3 +108,36 @@ color: #6E9C9F;
     display: flex;
     column-gap: 5px;
 }
+
+.slider{
+    width: 600px;
+}
+.slider-section{
+    display: flex;
+    column-gap: 100px;
+    margin: 90px 0;
+}
+.slider-section__content{
+  width: 255px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.slider-section__text{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+.slider-section__link{
+    font-family: 'Raleway';
+font-style: normal;
+font-weight: 500;
+font-size: 17px;
+line-height: 140%;
+letter-spacing: 0.02em;
+color: #6E9C9F;
+}

@@ -17,6 +17,13 @@
             "card-title1":"T-Shirt USA",
             "card-title2":"Swim-suit Glow",
             "card-title3":"Sweatshirt Sweet"
+        },
+        "sliderScreen" :{
+            "title":"Dream team Womazing",
+            "subtitle":"For each",
+            "text1":"Every girl is unique. However, we went through a million little things.",
+            "text2":"Womazing looks for these little things and creates beautiful things that emphasize the advantages of every girl.",
+            "about":"More about the brand"
         }
     },
     "shop":{
@@ -57,7 +64,7 @@
     },
     "account":{
         "about":{
-            "title":"Account",
+            "title":" My Account",
             "link1":"Main",
             "link2":"Account"
         }

@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react'
 import { initReactI18next, useTranslation } from 'react-i18next'
 import { Link, NavLink } from 'react-router-dom';
 import { CustomContext } from '../../Context';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import 'antd/dist/antd.css';
 import { Pagination } from 'antd';
 
@@ -76,7 +78,13 @@ const Shop = () => {
             }).map(item => (
               <div key={item.id} className="shop__card">
                   <Link className='shop__card-link' to={`/product/${item.id}`}>
-                    <img className="shop__card-img" src={`../${item.image}`} alt={item.title} />
+                    <LazyLoadImage
+                        alt={item.title}
+                        title={item.title}
+                        className="shop__card-img"
+                        src={`../${item.image}`}
+                        effect="blur"
+                    />
                   </Link>
                     <h3 className="shop__card-title">{item.title}</h3>
                     <p className="shop__card-price">${item.priceSale 

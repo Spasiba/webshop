@@ -51,7 +51,7 @@ const Product = () => {
                 <ul className="product__content-sizes">
                     {
                         product.size.map((item) => (
-                        <li onClick={()=> setSize(item)} className={`product__content-size ${item === size ? 'product__content-sizeActive':''}`}>{item}</li>
+                        <li key={item} onClick={()=> setSize(item)} className={`product__content-size ${item === size ? 'product__content-sizeActive':''}`}>{item}</li>
                         ))
                    }
                 </ul>
@@ -59,7 +59,7 @@ const Product = () => {
                 <ul className="product__content-sizes">
                     {
                         product.colors.map((item) => (
-                        <li onClick={()=> setColor(item)} style={{background: item}} className={`product__content-color ${item === color ? 'product__content-colorActive':''}`}/>
+                        <li key={item} onClick={()=> setColor(item)} style={{background: item}} className={`product__content-color ${item === color ? 'product__content-colorActive':''}`}/>
                         ))
                    }
                 </ul>
@@ -71,7 +71,7 @@ const Product = () => {
                 }
                 
                 <div className='product__content-form'>
-                    <input className='product__content-input' type="number" value={count} onChange={(e) => setCount(e.target.value)} disabled={product.inStock <= 0} min='1' max={product.inStock} defaultValue='1'/>
+                    <input className='product__content-input' value={count} onChange={(e) => setCount(e.target.value)} disabled={!product.inStock} min='1' max={product.inStock} defaultValue='1'/>
                     <button className='product__content-btn' onClick={()=>addCart({
                        id: product.id,
                        title: product.title,

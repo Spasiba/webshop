@@ -19,6 +19,8 @@
     "react-dom": "^18.1.0",
     "react-hook-form": "^7.32.0",
     "react-i18next": "^11.17.1",
+    "react-lazy-load-image-component": "^1.5.4",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"

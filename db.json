@@ -4,7 +4,7 @@
       "email": "qwerty@email.ua",
       "password": "$2a$10$GEQmqT/gUfTYYEN8SF4kA.5EcOCO/XWY22BhxBDVYbOcfzF7g7/g6",
       "login": "123456",
-      "phone": "123456",
+      "phone": "654321",
       "orders": [],
       "id": 1,
       "order": [
@@ -35,6 +35,14 @@
           "date": "2022-07-05T14:48:23.689Z"
         }
       ]
+    },
+    {
+      "email": "qweqw@ffd.werew",
+      "password": "$2a$10$wbhUWw7eCHukn/pMS.XlRumm3sOzgpSr65n9BwDRhthEGlNJGH8Li",
+      "login": "123456",
+      "phone": "123456",
+      "orders": [],
+      "id": 2
     }
   ],
   "clothes": [

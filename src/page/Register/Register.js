@@ -8,14 +8,18 @@ const Register = () => {
 
     const {registerUser}=useContext(CustomContext)
  
-   const {
-       register,
-       handleSubmit,
-       setError:{
-           errors
-       },
-       reset
-   } = useForm();
+    const {
+        reset,
+        register,
+        handleSubmit,
+        formState: {
+          errors
+        },
+        watch
+      } = useForm({
+        mode:"onBlur"
+      })
+  
 
 
 
@@ -27,8 +31,22 @@ const Register = () => {
             <input {...register('email')} className="form__input" type="email" placeholder="Введите email"/>
             <input {...register('login')} className="form__input"  type="text" placeholder="Введите login"/>
             <input {...register('phone')} className="form__input"  type="text" placeholder="Введите номер"/>
-            <input {...register('password')} className="form__input"  type="password" placeholder="Введите пароль"/>
-            <input className="form__input" type="password" placeholder="Подтвердить пароль"/>
+            <input className="form__input" placeholder="Введите пароль" {...register('password' , {
+                              required: "you must specify a password",
+                              minLength: {
+                                value: 6,
+                                message: "Password must have at least 6 characters"
+                              }
+                            })} type='password'/>
+            {errors?.password && <p>{errors?.password?.message}</p>}
+            <input className="form__input" placeholder="Подтвердить пароль"  {...register('confirmPwd', {
+                              validate:(val) => {
+                                if(watch('password') !== val){
+                                  return "Your password do no math"
+                                }
+                              }
+                            })} type='password'/>
+            {errors?.confirmPwd && <p>{errors?.confirmPwd?.message}</p>}
 
             <button className="form__btn" type="submit">Зарегистрироватся</button>
 
