@@ -12,6 +12,7 @@ const Account = () => {
     const {user, setUser} = useContext(CustomContext)
     const [change, setChange] = useState(false)
     const [passwordChange, setPasswordChange] = useState(false)
+    const [view,setView] = useState('history')
 
 
     const {
@@ -52,12 +53,18 @@ const Account = () => {
             -
             <NavLink to="/account">{t("account.about.link2")}</NavLink>
         </div>
-        <button> История заказов</button>
-        <button> Настройки</button>
+        <button className={`${view === 'history' && 'activeBtn'}`} onClick={() => setView('history')}> История заказов</button>
+        <button className={`${view === 'setting' && 'activeBtn'}`} onClick={() => setView('setting')}> Настройки</button>
 
         {
             user.login.length
                      ?  
+                      view === 'history'
+                      ?
+                      <div className="account__info" >
+                        <h3>History</h3>
+                      </div>
+                      :
                      <div>
                      <form className="account__info" onSubmit={handleSubmit(changeUser)}>
                       <h3>Личные данные</h3>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Shop from '../page/Shop/Shop';
 import Footer from './Footer/Footer';
@@ -14,10 +14,14 @@ import Product from '../page/Product/Product';
 import Account from '../page/Account/Account';
 import Checkout from '../page/checkout/Checkout';
 import Order from '../page/Order/Order';
+import AdminPanel from '../page/AdminPanel/AdminPanel';
+import { CustomContext } from '../Context'
+import CreateProduct from '../page/CreateProduct/CreateProduct';
 
 
 const Layout = () => {
     const location = useLocation();
+    const {user} = useContext(CustomContext)
     
   return (
     <div>
@@ -38,12 +42,15 @@ const Layout = () => {
             <Route path='/login' element={<Login/>}/>
             <Route path='/register' element={<Register/>}/>
             <Route path='/account' element={<Account/>}/>
+            {user.email === 'admin@gmail.com' ? <Route path='/admin' element={<AdminPanel/>}/> : ''}
+            {user.email === 'admin@gmail.com' ? <Route path='/create' element={<CreateProduct/>}/> : ''}
             <Route path='*' element={<NotFound/>}/>
         </Routes>
 
         {
                 location.pathname === "/login" 
-            || location.pathname  === "/register" 
+            || location.pathname  === "/register"
+            || location.pathname  === "/admin"  
            
             ? '' : <Footer/> 
         }

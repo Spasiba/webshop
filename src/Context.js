@@ -15,6 +15,11 @@ export const Context = (props) =>{
     const [cart, setCart] = useState([])
     const [ticket,setTicket] = useState([])
 
+    const getAllClothes = () => {
+        axios('http://localhost:8080/clothes')
+       .then(({data}) => setShop(data))
+    }
+
     const addCart  = (product) => {
 
         let idx = cart.findIndex((item) => item.id === product.id && item.color === product.color && item.size === product.size)
@@ -66,8 +71,7 @@ export const Context = (props) =>{
          setCart(JSON.parse(localStorage.getItem('cart')))
        }
 
-       axios('http://localhost:8080/clothes')
-       .then(({data}) => setShop(data))
+       getAllClothes()
 
     },[])
 
@@ -122,7 +126,8 @@ export const Context = (props) =>{
         page,
         setPage,
         product,
-        setProduct
+        setProduct,
+        getAllClothes
     }
 
     return <CustomContext.Provider value={value}>

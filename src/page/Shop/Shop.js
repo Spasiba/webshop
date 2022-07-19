@@ -12,7 +12,7 @@ const Shop = () => {
 
   const [sort,setSort] = useState('')
 
-  const {shop, status,setStatus,page,setPage } = useContext(CustomContext)
+  const {shop, status,setStatus,page,setPage, user } = useContext(CustomContext)
 
   return (
    <section className="shop">
@@ -45,18 +45,31 @@ const Shop = () => {
           setPage(1)
           }}>Толстовки</li>
         </ul>
-        <div> 
-          <p>Сортировка: {sort === 'big' ? 'Сначала большая цена' : sort === 'less' ? 'Сначала низкая цена' : sort === "sale" ? 'Товар со скидками' : ''}</p>
-          <button className="shop__button" type="button" onClick={() => setSort('big')}>к большему</button>
-          <button className="shop__button" type="button" onClick={() => setSort('less')}>к меньшему</button>
-          <button className="shop__button" type="button" onClick={() => setSort('sale')}>скидки</button>
-        </div>
 
-        <p className="">
+        {
+          user.email === 'admin@gmail.com' ?
+          <div>
+            <Link to='/create' className="shop__button" type="button">Добавить</Link> 
+           </div>
+          : <span></span>
+        }
+       
+        <div className="shop__sort">
+         
+          <div className='shop__sort-btn'>
+          <p>Сортировка: {sort === 'big' ? 'Сначала большая цена' : sort === 'less' ? 'Сначала низкая цена' : sort === "sale" ? 'Товар со скидками' : ''}</p>
+            <button className="shop__button" type="button" onClick={() => setSort('big')}>к большему</button>
+            <button className="shop__button" type="button" onClick={() => setSort('less')}>к меньшему</button>
+            <button className="shop__button" type="button" onClick={() => setSort('sale')}>скидки</button>
+          </div>
+          <p className="">
             Показано: {shop.filter((item)=> sort === 'sale' ? item.priceSale :  (status === 'all') ? item : item.category === status).filter((item, idx) => {
               return idx + 1 <= page * 9 && idx >= page * 9 - 9 ;
             }).length} из {shop.filter((item)=> (status === 'all') ? item : item.category === status).filter((item) => sort === 'sale' ? item.priceSale : item ).length} товаров
         </p>
+        </div>
+
+        
 
         <div className="shop__row">
           {

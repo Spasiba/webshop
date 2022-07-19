@@ -1,18 +1,22 @@
-import {useParams} from "react-router-dom"
+import {useLocation, useParams} from "react-router-dom"
 import React,{useEffect, useState, useContext} from 'react'
 import axios from "axios";
 import {CustomContext} from "../../Context";
 import { Link, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next'
+import userEvent from "@testing-library/user-event";
 
 const Product = () => {
     const {t} = useTranslation();
     const params = useParams()
+    const location = useLocation()
     
     const [count, setCount] = useState(1)
     const [color, setColor] = useState('')
     const [size, setSize] = useState('')
-    const {shop, page, setPage, status, setStatus, addCart, product, setProduct} = useContext(CustomContext)
+    const [sale, setSale] = useState(false)
+    const [saleCount, setSaleCount] = useState(0)
+    const {shop, page, setPage, status, setStatus, addCart, product, setProduct,user,getAllClothes} = useContext(CustomContext)
  
 
     useEffect(() => {
@@ -22,7 +26,7 @@ const Product = () => {
             setColor(data.colors[0])
             setSize(data.size[0])
         })
-    }, [params])
+    }, [location, shop])
     
 
   return (
@@ -40,6 +44,28 @@ const Product = () => {
                 <div className="product__content">
             <img className="product__content-img" src={`/${product.image}`} alt={product.title} />
             <div className="product__info">
+
+                {
+                     user.email === 'admin@gmail.com' ?
+                        <div>
+                            {sale? <input type="number" value={saleCount} onChange={(e)=>setSaleCount(e.target.value)}/> : ''}
+                             <button type="button" onClick={() => {
+                                if (sale){
+                                    axios.patch(`http://localhost:8080/clothes/${product.id}`, {priceSale: product.price - product.price / 100 * saleCount})
+                                    .then(() =>{
+                                        getAllClothes()
+                                        setSaleCount(0)
+                                    })
+                                }
+                                setSale(!sale)
+                               
+                             }}>{ !product.priceSale ? 'Добавить' : 'Изменить'} скидку</button>
+                        </div>
+                    : <span></span>
+                }
+               
+                
+
                 <p className="product__content-price">${product.priceSale 
                     ? <>
                       <span style={{textDecoration: 'line-through'}}>{product.price}</span> 
@@ -71,7 +97,7 @@ const Product = () => {
                 }
                 
                 <div className='product__content-form'>
-                    <input className='product__content-input' value={count} onChange={(e) => setCount(e.target.value)} disabled={!product.inStock} min='1' max={product.inStock} defaultValue='1'/>
+                    <input className='product__content-input' value={count} onChange={(e) => setCount(e.target.value)} disabled={!product.inStock} min='1' max={product.inStock} />
                     <button className='product__content-btn' onClick={()=>addCart({
                        id: product.id,
                        title: product.title,

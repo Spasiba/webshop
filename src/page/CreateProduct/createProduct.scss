@@ -1,0 +1,18 @@
+.create__color{
+    position: relative;
+}
+
+.create__color::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '+';
+    font-size: 30px;
+    color: cadetblue;
+}
+
+.create__size-active{
+    background-color: black;
+    color: white;
+}

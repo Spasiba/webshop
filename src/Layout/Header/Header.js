@@ -30,6 +30,14 @@ const Header = () => {
                     <li><NavLink className='header__item' to="/shop">{t("header.link2")}</NavLink></li>
                     <li><NavLink className='header__item' to="/brands">{t("header.link3")}</NavLink></li>
                     <li><NavLink className='header__item' to="/contact">{t("header.link4")}</NavLink></li>
+                    {
+                        user.email === 'admin@gmail.com' 
+                        ?
+                        <li><NavLink className='header__item' to="/admin">Админ панель</NavLink></li>
+                        : ''
+
+                    }
+                    
                 </ul>
                 <div className="header__call"> 
                     <a href="tel:+7 (495) 823-54-12" >

@@ -1,0 +1,15 @@
+import React from 'react'
+
+const CreateSize = ({sizes,setSizes,size}) => {
+  return (
+    <li onClick={() => {
+        if(sizes.includes(size)){
+           setSizes( sizes.filter((item) => item !== size))
+        }else{
+            setSizes([...sizes, size])
+        }
+    }}  className={`product__content-size ${sizes.includes(size) ? 'create__size-active' : ''}`}>{size}</li>
+  )
+}
+
+export default CreateSize

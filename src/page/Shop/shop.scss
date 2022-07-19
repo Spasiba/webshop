@@ -64,6 +64,17 @@ letter-spacing: 0.02em;
 
 color: #998E78;
 }
+
+.shop__sort{
+    display: flex;
+    flex-direction: column;
+}
+.shop__sort-btn{
+display: flex;
+justify-content: end;
+column-gap: 10px;
+}
+
 .shop__button{
     font-family: 'Raleway';
     font-style: normal;

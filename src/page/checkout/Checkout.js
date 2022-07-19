@@ -43,7 +43,7 @@ const Checkout = () => {
         await Array.isArray(ticket) && ticket.length && ticket[0].count > 1 ? 
             axios.patch(`http://localhost:8080/tickets/${ticket[0].id}`, {count: ticket[0].count - 1 })
                 .then(() => console.log('use ticket'))
-            : ticket[0].count === 1 ? axios.delete(`http://localhost:8080/tickets/${ticket[0].id}`).then(() => console.log('success delate ticket')) 
+            : Array.isArray(ticket) && ticket.length && ticket[0].count === 1 ? axios.delete(`http://localhost:8080/tickets/${ticket[0].id}`).then(() => console.log('success delate ticket')) 
                 : console.log('error')
 
         await reset()
@@ -84,7 +84,7 @@ const Checkout = () => {
                 </div>
                 {
                     cart.map((item) => (
-                        <li className="checkout__buyer-cart">
+                        <li key={item.id} className="checkout__buyer-cart">
                             <div className="checkout__buyer-top">
                                 <p className="checkout__buyer-product">
                                     {item.title}
