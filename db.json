@@ -1,40 +1,6 @@
 {
   "users": [
     {
-      "email": "qwerty@email.ua",
-      "password": "$2a$10$GEQmqT/gUfTYYEN8SF4kA.5EcOCO/XWY22BhxBDVYbOcfzF7g7/g6",
-      "login": "123456",
-      "phone": "654321",
-      "orders": [],
-      "id": 1,
-      "order": [
-        {
-          "clothes": [
-            {
-              "id": 2,
-              "title": "cardigan",
-              "image": "Shop/item2.png",
-              "color": "green",
-              "size": "l",
-              "count": 1,
-              "price": 245,
-              "category": "cardigan"
-            }
-          ],
-          "price": 245,
-          "date": "2022-07-17T11:54:42.466Z"
-        }
-      ]
-    },
-    {
-      "email": "qweqw@ffd.werew",
-      "password": "$2a$10$wbhUWw7eCHukn/pMS.XlRumm3sOzgpSr65n9BwDRhthEGlNJGH8Li",
-      "login": "123456",
-      "phone": "123456",
-      "orders": [],
-      "id": 2
-    },
-    {
       "email": "admin@gmail.com",
       "password": "$2a$10$GkSk38bJe7EbxJL9UoHyM.vxIj9db/meCJhhDFHrN.6A/b8J3eGA2",
       "login": "admin",
@@ -42,30 +8,53 @@
       "confirmPwd": "admin1",
       "orders": [],
       "id": 3
+    },
+    {
+      "email": "qwerty@email.ua",
+      "password": "$2a$10$eN849DKgZjca6qYPBMEjw.UE/9NHDFEKl3zQz7.WiFPkac/E1EpWG",
+      "login": "123456",
+      "phone": "123456",
+      "confirmPwd": "123456",
+      "orders": [
+        {
+          "clothes": [
+            {
+              "id": 1,
+              "title": "cardigan",
+              "image": "Shop/item2.png",
+              "color": "green",
+              "size": "xl",
+              "count": 1,
+              "price": 240.1,
+              "category": "cardigan"
+            }
+          ],
+          "price": 240.1,
+          "date": "2022-07-21T17:13:18.514Z"
+        },
+        {
+          "clothes": [
+            {
+              "id": 2,
+              "title": "cardigan",
+              "image": "Shop/item2.png",
+              "color": "white",
+              "size": "s",
+              "count": 1,
+              "price": 150,
+              "category": "cardigan"
+            }
+          ],
+          "price": 150,
+          "date": "2022-07-21T17:16:48.714Z"
+        }
+      ],
+      "id": 4
     }
   ],
   "clothes": [
     {
       "id": 1,
-      "title": "coat",
-      "price": 229,
-      "priceSale": 200,
-      "image": "Shop/item1.png",
-      "category": "coat",
-      "size": [
-        "s",
-        "m",
-        "l",
-        "xl"
-      ],
-      "colors": [
-        "green",
-        "black"
-      ],
-      "inStock": "20"
-    },
-    {
-      "id": 2,
       "title": "cardigan",
       "price": 245,
       "image": "Shop/item2.png",
@@ -83,6 +72,26 @@
       ],
       "inStock": "10",
       "priceSale": 240.1
+    },
+    {
+      "id": 2,
+      "title": "cardigan",
+      "price": "150",
+      "image": "Shop/item2.png",
+      "category": "cardigan",
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "colors": [
+        "white",
+        "black",
+        "green"
+      ],
+      "inStock": "72",
+      "priceSale": 120
     },
     {
       "id": 3,
@@ -345,13 +354,13 @@
       "id": 1,
       "title": "price",
       "sum": 5,
-      "count": 30
+      "count": 29
     },
     {
       "id": 2,
       "title": "sale",
       "sum": 15,
-      "count": 8
+      "count": 5
     },
     {
       "id": 3,
@@ -363,75 +372,92 @@
   "orders": [
     {
       "name": "qwertyuiopa",
-      "phone": "7856 761074",
-      "email": "qweqw@ffd.werew",
-      "contry": "wqewqq",
-      "city": "London",
-      "street": "2029 Drayton Pl",
-      "home": "wqeqwe",
-      "room": "qwewqe",
-      "message": "qwewqeqwewqewqeqweqweqweqwe",
-      "clothes": [
-        {
-          "id": 1,
-          "title": "coat",
-          "image": "Shop/item1.png",
-          "color": "green",
-          "size": "s",
-          "count": 1,
-          "price": 200,
-          "category": "coat"
-        },
-        {
-          "id": 2,
-          "title": "cardigan",
-          "image": "Shop/item2.png",
-          "color": "white",
-          "size": "s",
-          "count": 1,
-          "price": 245,
-          "category": "cardigan"
-        }
-      ],
-      "price": 378.25,
-      "user": "qwerty@email.ua",
-      "date": "2022-07-05T14:42:36.225Z",
-      "id": 1
-    },
-    {
-      "name": "qwertyuiopa",
-      "phone": "123",
-      "email": "qwerty@email.ua",
-      "contry": "wqewqq",
-      "city": "San Francisco",
-      "street": "916 E Elm St Unit C",
-      "home": "wqeqwe",
-      "room": "qwewqe",
-      "message": "qwewqeqwewqewqeqweqweqweqwe",
-      "clothes": [
-        {
-          "id": 2,
-          "title": "cardigan",
-          "image": "Shop/item2.png",
-          "color": "green",
-          "size": "s",
-          "count": 1,
-          "price": 245,
-          "category": "cardigan"
-        }
-      ],
-      "price": 245,
-      "user": "qwerty@email.ua",
-      "date": "2022-07-05T14:43:28.455Z",
-      "id": 2
-    },
-    {
-      "name": "4324",
       "phone": "123456",
       "email": "efsf@efewf.re",
       "contry": "wqewqq",
-      "city": "London",
+      "city": "San Francisco",
       "street": "2029 Drayton Pl",
+      "home": "wqeqwe",
+      "room": "qwewqe",
+      "message": "qwewqeqwewqewqeqweqweqweqwe",
+      "clothes": [
+        {
+          "id": 2,
+          "title": "cardigan",
+          "image": "Shop/item2.png",
+          "color": "green",
+          "size": "xl",
+          "count": 1,
+          "price": 150,
+          "category": "cardigan"
+        }
+      ],
+      "price": 150,
+      "user": "qwerty@email.ua",
+      "date": "2022-07-21T17:06:27.852Z",
+      "id": 1
+    },
+    {
+      "name": "Vladislav",
+      "phone": "654321",
+      "email": "qwerty@email.ua",
+      "contry": "wqewqq",
+      "city": "Tucson",
+      "street": "7-1-399/8, Balkpet,",
+      "home": "wqeqwe",
+      "room": "qwewqe",
+      "message": "qwewqeqwewqewqeqweqweqweqwe",
+      "clothes": [
+        {
+          "id": 1,
+          "title": "cardigan",
+          "image": "Shop/item2.png",
+          "color": "green",
+          "size": "s",
+          "count": 1,
+          "price": 240.1,
+          "category": "cardigan"
+        }
+      ],
+      "price": 204.08499999999998,
+      "user": "qwerty@email.ua",
+      "date": "2022-07-21T17:07:43.083Z",
+      "id": 2
+    },
+    {
+      "name": "qwertyuiopa",
+      "phone": "123456",
+      "email": "qwerty@email.ua",
+      "contry": "wqewqq",
+      "city": "London",
+      "street": "Flat 4 Bollo LaB",
+      "home": "wqeqwe",
+      "room": "qwewqe",
+      "message": "",
+      "clothes": [
+        {
+          "id": 2,
+          "title": "cardigan",
+          "image": "Shop/item2.png",
+          "color": "green",
+          "size": "s",
+          "count": 1,
+          "price": 150,
+          "category": "cardigan"
+        }
+      ],
+      "price": 142.5,
+      "user": "qwerty@email.ua",
+      "date": "2022-07-21T17:09:34.263Z",
+      "id": 3
+    },
+    {
+      "name": "qwertyuiopa",
+      "phone": "123456",
+      "email": "qwerty@email.ua",
+      "contry": "wqewqq",
+      "city": "London",
+      "street": "Flat 4 Bollo LaB",
       "home": "wqeqwe",
       "room": "qwewqe",
       "message": "qwewqeqwewqewqeqweqweqweqwe",
@@ -443,85 +469,48 @@
           "color": "green",
           "size": "s",
           "count": 1,
-          "price": 245,
+          "price": 150,
           "category": "cardigan"
-        },
-        {
-          "id": 1,
-          "title": "coat",
-          "image": "Shop/item1.png",
-          "color": "black",
-          "size": "s",
-          "count": 1,
-          "price": 200,
-          "category": "coat"
         }
       ],
-      "price": 378.25,
+      "price": 142.5,
       "user": "qwerty@email.ua",
-      "date": "2022-07-05T14:48:23.668Z",
-      "id": 3
-    },
-    {
-      "name": "Vladislav",
-      "phone": "7856 761074",
-      "email": "qweqw@ffd.werew",
-      "contry": "wqewqq",
-      "city": "London",
-      "street": "2029 Drayton Pl",
-      "home": "wqeqwe",
-      "room": "qwewqe",
-      "message": "qwewqeqwewqewqeqweqweqweqwe",
-      "clothes": [
-        {
-          "id": 1,
-          "title": "coat",
-          "image": "Shop/item1.png",
-          "color": "green",
-          "size": "s",
-          "count": 2,
-          "price": 200,
-          "category": "coat"
-        }
-      ],
-      "price": 400,
-      "user": "qwerty@email.ua",
-      "date": "2022-07-17T11:47:00.058Z",
+      "date": "2022-07-21T17:09:42.805Z",
       "id": 4
     },
     {
-      "name": "Vladislav",
-      "phone": "7856 761074",
-      "email": "qweqw@ffd.werew",
+      "name": "qwertyuiopa",
+      "phone": "123456",
+      "email": "qwerty@email.ua",
       "contry": "wqewqq",
       "city": "London",
-      "street": "2029 Drayton Pl",
+      "street": "Flat 4 Bollo LaB",
       "home": "wqeqwe",
       "room": "qwewqe",
       "message": "qwewqeqwewqewqeqweqweqweqwe",
       "clothes": [
         {
-          "id": 1,
-          "title": "coat",
-          "image": "Shop/item1.png",
+          "id": 2,
+          "title": "cardigan",
+          "image": "Shop/item2.png",
           "color": "green",
           "size": "s",
-          "count": 2,
-          "price": 200,
-          "category": "coat"
+          "count": 1,
+          "price": 150,
+          "category": "cardigan"
         }
       ],
-      "price": 400,
+      "price": 142.5,
       "user": "qwerty@email.ua",
-      "date": "2022-07-17T11:47:01.354Z",
+      "date": "2022-07-21T17:10:45.468Z",
       "id": 5
     },
     {
       "name": "qwertyuiopa",
-      "phone": "7856 761074",
-      "email": "efsf@efewf.re",
+      "phone": "654321",
+      "email": "qwerty@email.ua",
       "contry": "wqewqq",
-      "city": "San Francisco",
+      "city": "London",
       "street": "62 Mount Pleasant Rd",
       "home": "wqeqwe",
       "room": "qwewqe",
@@ -532,16 +521,124 @@
           "title": "cardigan",
           "image": "Shop/item2.png",
           "color": "green",
-          "size": "l",
+          "size": "s",
           "count": 1,
-          "price": 245,
+          "price": 150,
           "category": "cardigan"
         }
       ],
-      "price": 245,
+      "price": 127.5,
       "user": "qwerty@email.ua",
-      "date": "2022-07-17T11:54:42.444Z",
+      "date": "2022-07-21T17:12:29.716Z",
       "id": 6
+    },
+    {
+      "name": "qwertyuiopa",
+      "phone": "654321",
+      "email": "qweqw@ffd.werew",
+      "contry": "wqewqq",
+      "city": "San Francisco",
+      "street": "2029 Drayton Pl",
+      "home": "wqeqwe",
+      "room": "qwewqe",
+      "message": "",
+      "clothes": [
+        {
+          "id": 1,
+          "title": "cardigan",
+          "image": "Shop/item2.png",
+          "color": "green",
+          "size": "xl",
+          "count": 1,
+          "price": 240.1,
+          "category": "cardigan"
+        }
+      ],
+      "price": 240.1,
+      "user": "qwerty@email.ua",
+      "date": "2022-07-21T17:13:18.497Z",
+      "id": 7
+    },
+    {
+      "name": "",
+      "phone": "",
+      "email": "",
+      "contry": "wqewqq",
+      "city": "London",
+      "street": "Flat 46, Blackburn Court Bollo Lane GB 365 6085 76 Code:Paid",
+      "home": "",
+      "room": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 2,
+          "title": "cardigan",
+          "image": "Shop/item2.png",
+          "color": "white",
+          "size": "s",
+          "count": 1,
+          "price": 150,
+          "category": "cardigan"
+        }
+      ],
+      "price": 150,
+      "user": "qwerty@email.ua",
+      "date": "2022-07-21T17:15:00.545Z",
+      "id": 8
+    },
+    {
+      "name": "qwertyuiopa",
+      "phone": "123456",
+      "email": "qweqw@ffd.werew",
+      "contry": "wqewqq",
+      "city": "London",
+      "street": "Flat 46, Blackburn Court Bollo Lane GB 3",
+      "home": "wqeqwe",
+      "room": "qwewqe",
+      "message": "qwewqeqwewqewqeqweqweqweqwe",
+      "clothes": [
+        {
+          "id": 2,
+          "title": "cardigan",
+          "image": "Shop/item2.png",
+          "color": "white",
+          "size": "s",
+          "count": 1,
+          "price": 150,
+          "category": "cardigan"
+        }
+      ],
+      "price": 150,
+      "user": "qwerty@email.ua",
+      "date": "2022-07-21T17:15:16.444Z",
+      "id": 9
+    },
+    {
+      "name": "qwertyuiopa",
+      "phone": "123456",
+      "email": "qweqw@ffd.werew",
+      "contry": "wqewqq",
+      "city": "London",
+      "street": "Flat 46, Blackburn Court Bollo Lane GB 3",
+      "home": "wqeqwe",
+      "room": "qwewqe",
+      "message": "qwewqeqwewqewqeqweqweqweqwe",
+      "clothes": [
+        {
+          "id": 2,
+          "title": "cardigan",
+          "image": "Shop/item2.png",
+          "color": "white",
+          "size": "s",
+          "count": 1,
+          "price": 150,
+          "category": "cardigan"
+        }
+      ],
+      "price": 150,
+      "user": "qwerty@email.ua",
+      "date": "2022-07-21T17:16:48.679Z",
+      "id": 10
     }
   ]
 }

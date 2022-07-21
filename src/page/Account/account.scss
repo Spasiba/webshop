@@ -35,3 +35,34 @@ color: #000000;
 
     color: #000000;
 }
+
+.account__change{
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    color: #6E9C9F;
+    margin-right: 2%;
+}
+.account__change:hover{
+    color:aquamarine
+}
+
+.cart__orders{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid grey;
+    padding: 2%;
+    margin-bottom: 2%;
+}
+.cart__orders-left{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.cart__orders-right{
+    display: flex;
+    width: 70%;
+    column-gap: 4%;
+   
+}

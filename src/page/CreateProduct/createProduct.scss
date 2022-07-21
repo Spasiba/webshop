@@ -16,3 +16,19 @@
     background-color: black;
     color: white;
 }
+
+.create__form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    border: 1px solid gray ;
+    padding: 2%;
+ 
+}
+.create__form-block{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  
+}

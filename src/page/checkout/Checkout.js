@@ -25,8 +25,8 @@ const Checkout = () => {
             date: new Date() 
         }).then(() => console.log('Success'))
 
-        await axios.patch(`http://localhost:8080/users/${user.id}`, {
-            order: [
+        await axios.post(`http://localhost:8080/users/${user.id}`, {
+            orders: [
                 ...user.orders,
                 {
                     clothes: cart,
@@ -83,8 +83,8 @@ const Checkout = () => {
                     <p>Всего</p>
                 </div>
                 {
-                    cart.map((item) => (
-                        <li key={item.id} className="checkout__buyer-cart">
+                    cart.map((item,idx) => (
+                        <li key={idx} className="checkout__buyer-cart">
                             <div className="checkout__buyer-top">
                                 <p className="checkout__buyer-product">
                                     {item.title}

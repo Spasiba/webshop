@@ -12,6 +12,7 @@ export const Context = (props) =>{
     })
 
     const [product, setProduct] = useState({})
+    const [order, setOrder] = useState({})
     const [cart, setCart] = useState([])
     const [ticket,setTicket] = useState([])
 
@@ -127,6 +128,8 @@ export const Context = (props) =>{
         setPage,
         product,
         setProduct,
+        order,
+        setOrder,
         getAllClothes
     }
 

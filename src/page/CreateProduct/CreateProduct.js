@@ -30,7 +30,7 @@ const CreateProduct = () => {
             getAllClothes()
             navigate('/shop')
         })
-        console.log(data)
+        
     }
  
   return (
@@ -51,6 +51,15 @@ const CreateProduct = () => {
                 <input {...register('title')} type="text" id="title" />
             </div>
             <div className='create__form-block'>
+                <label htmlFor="category">Категория</label>
+                <select {...register('category')} id="category">
+                    <option >hoodie</option>
+                    <option >coat</option>
+                    <option >sweatshirt</option>
+                    <option >cardigan</option>
+                </select>
+            </div>
+            <div className='create__form-block'>
                 <label htmlFor="price">Цена</label>
                 <input {...register('price')} type="number" id="price" />
             </div>
@@ -59,11 +68,8 @@ const CreateProduct = () => {
                 <input {...register('inStock')} type="number" id="inStock" />
             </div>
             <div className='create__form-block'>
-                <label htmlFor="image">Картинка</label>
-                <input {...register('image')} type="file" id="image" />
-            </div>
-            <div className='create__form-block'>
-                <ul className="product__content-sizes">
+            <label htmlFor="colors">Цвета</label>
+                <ul className="product__content-sizes" id="colors">
                     <CreateColors colors={colors} setColors={setColors} color={"blue"}/>
                     <CreateColors colors={colors} setColors={setColors} color={"red"}/>
                     <CreateColors colors={colors} setColors={setColors} color={"green"}/>
@@ -73,7 +79,8 @@ const CreateProduct = () => {
                 </ul>
             </div>
             <div  className='create__form-block'>
-                <ul className="product__content-sizes">
+            <label htmlFor="sizes">Размеры</label>
+                <ul className="product__content-sizes" id="sizes">
                     <CreateSize sizes={sizes} setSizes={setSizes} size={'S'}/>
                     <CreateSize sizes={sizes} setSizes={setSizes} size={'M'}/>
                     <CreateSize sizes={sizes} setSizes={setSizes} size={'L'}/>
@@ -81,15 +88,11 @@ const CreateProduct = () => {
                 </ul>
             </div>
             <div className='create__form-block'>
-                <label htmlFor="category">Категория</label>
-                <select {...register('category')} id="category">
-                    <option >hoodie</option>
-                    <option >coat</option>
-                    <option >sweatshirt</option>
-                    <option >cardigan</option>
-                </select>
+                <label htmlFor="image">Картинка</label>
+                <input {...register('image')} type="file" id="image" />
             </div>
-            <button type='submit'>Создать</button>
+            
+            <button className="collection-section__button" type='submit'>Создать</button>
             
         </form>
     </div>

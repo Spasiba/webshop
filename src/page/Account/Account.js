@@ -1,5 +1,5 @@
 
-import React,{useContext, useState} from 'react'
+import React,{useContext, useEffect, useState} from 'react'
 import { CustomContext } from '../../Context'
 import { useTranslation } from 'react-i18next'
 import {Link, NavLink} from "react-router-dom"
@@ -9,7 +9,7 @@ import { message } from 'antd'
 
 const Account = () => {
     const {t} = useTranslation()
-    const {user, setUser} = useContext(CustomContext)
+    const {user, setUser, order, setOrder} = useContext(CustomContext)
     const [change, setChange] = useState(false)
     const [passwordChange, setPasswordChange] = useState(false)
     const [view,setView] = useState('history')
@@ -26,6 +26,15 @@ const Account = () => {
     } = useForm({
       mode:"onBlur"
     })
+
+   /* useEffect(() => {
+      axios(`http://localhost:8080/users/${user.id}`)
+      .then(({data}) => {
+          setOrder(data.order[0].clothes)
+          console.log(data.order[0].clothes)
+          
+      })
+  },[user] )*/
 
     const changeUser =  (data) => {
 
@@ -63,12 +72,51 @@ const Account = () => {
                       ?
                       <div className="account__info" >
                         <h3>History</h3>
+                        
+                        <div className="cart__info">
+                          <p className="cart__info-title">Данные заказа</p>
+                          <ul className="cart__info-list">
+                            <li className="cart__info-item">Заказ</li>
+                            
+                          </ul>
+                        </div>
+
+                        <div>
+                     
+                          {
+                            user.orders.map((item,idx) => (
+                            <div key={idx} className="cart__orders">
+                              <div className='cart__orders-left'>
+                              <p>data</p>
+                              <p>{item.date}</p>
+                              <p>price</p>
+                              <p>{item.price}$</p>
+                              </div>
+
+                              <div className='cart__orders-right'>
+                          
+                              <img className="cart__product-img" src={item.clothes[0].image} />
+                              <p className="cart__info-item">{item.clothes[0].title}</p>
+                              <p className="cart__info-item">{item.clothes[0].price}$</p>
+                              <p className="cart__info-item">{item.clothes[0].title}</p>
+                              <p className="cart__info-item">{item.clothes[0].size}</p>
+                              <p className="cart__info-item">{item.clothes[0].count}</p>
+                              <p className="cart__info-item">{item.clothes[0].color}</p>
+                            </div>
+                            </div>
+                            )
+                            )
+                          }
+                        </div>
+
+
+        
                       </div>
                       :
                      <div>
                      <form className="account__info" onSubmit={handleSubmit(changeUser)}>
                       <h3>Личные данные</h3>
-                      <span onClick={() => setChange(!change)}>
+                      <span className='account__change' onClick={() => setChange(!change)}>
                         {change 
                         ?
                           'Закрыть'
@@ -94,7 +142,7 @@ const Account = () => {
                     </form>
                     <div className="account__info">
                       <h3>Пароль</h3>
-                      <span onClick={() => setPasswordChange(!passwordChange)}>
+                      <span className='account__change' onClick={() => setPasswordChange(!passwordChange)}>
                         {change 
                         ?
                           'Закрыть'
