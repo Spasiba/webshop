@@ -42,7 +42,7 @@ const Layout = () => {
             <Route path='/login' element={<Login/>}/>
             <Route path='/register' element={<Register/>}/>
             <Route path='/account' element={<Account/>}/>
-            {user.email === 'admin@gmail.com' ? <Route path='/admin' element={<AdminPanel/>}/> : ''}
+            {user.email === 'admin@gmail.com' ? <Route path='/*' element={<AdminPanel/>}/> : ''}
             {user.email === 'admin@gmail.com' ? <Route path='/create' element={<CreateProduct/>}/> : ''}
             <Route path='*' element={<NotFound/>}/>
         </Routes>

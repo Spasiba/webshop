@@ -10,7 +10,7 @@ const Checkout = () => {
 
     const navigate = useNavigate()
 
-    const {cart,ticket,user,setCart, setTicket, setUser} = useContext(CustomContext)
+    const {cart,ticket,user,setCart, setTicket, setUser, setOrder} = useContext(CustomContext)
 
     const {reset, register, handleSubmit} = useForm()
 
@@ -25,17 +25,20 @@ const Checkout = () => {
             date: new Date() 
         }).then(() => console.log('Success'))
 
-        await axios.post(`http://localhost:8080/users/${user.id}`, {
+        await axios.patch(`http://localhost:8080/users/${user.id}`, {
             orders: [
                 ...user.orders,
                 {
+                    ...data,
                     clothes: cart,
                     price: Array.isArray(ticket) && ticket.length
                     ? cart.reduce((acc, rec) =>  acc + rec.count * rec.price, 0) - cart.reduce((acc, rec) =>  acc + rec.count * rec.price, 0) / 100 * ticket[0].sum 
                     : cart.reduce((acc, rec) =>  acc + rec.count * rec.price, 0),
                     date: new Date() 
+                    
+
                 }
-            ]}
+            ],}
         ).then(() => console.log('Success'))
 
         await axios(`http://localhost:8080/users/${user.id}`).then((res) => setUser(res.data))

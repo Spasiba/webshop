@@ -11,28 +11,21 @@
     },
     {
       "email": "qwerty@email.ua",
-      "password": "$2a$10$eN849DKgZjca6qYPBMEjw.UE/9NHDFEKl3zQz7.WiFPkac/E1EpWG",
+      "password": "$2a$10$4/KbdUqjFfPJV64y2/kGN.vPVO8jQ/sYTr1EiRKo5MA1FIRZ/SeYa",
       "login": "123456",
       "phone": "123456",
       "confirmPwd": "123456",
       "orders": [
         {
-          "clothes": [
-            {
-              "id": 1,
-              "title": "cardigan",
-              "image": "Shop/item2.png",
-              "color": "green",
-              "size": "xl",
-              "count": 1,
-              "price": 240.1,
-              "category": "cardigan"
-            }
-          ],
-          "price": 240.1,
-          "date": "2022-07-21T17:13:18.514Z"
-        },
-        {
+          "name": "Vladislav",
+          "phone": "123456",
+          "email": "efsf@efewf.re",
+          "contry": "wqewqq",
+          "city": "London",
+          "street": "62 Mount Pleasant Rd",
+          "home": "wqeqwe",
+          "room": "qwewqe",
+          "message": "qwewqeqwewqewqeqweqweqweqwe",
           "clothes": [
             {
               "id": 2,
@@ -41,12 +34,12 @@
               "color": "white",
               "size": "s",
               "count": 1,
-              "price": 150,
+              "price": 120,
               "category": "cardigan"
             }
           ],
-          "price": 150,
-          "date": "2022-07-21T17:16:48.714Z"
+          "price": 120,
+          "date": "2022-07-24T08:24:24.555Z"
         }
       ],
       "id": 4
@@ -639,6 +632,171 @@
       "user": "qwerty@email.ua",
       "date": "2022-07-21T17:16:48.679Z",
       "id": 10
+    },
+    {
+      "name": "4324",
+      "phone": "123456",
+      "email": "qwerty@email.ua",
+      "contry": "wqewqq",
+      "city": "Los Angeles",
+      "street": "916 E Elm St Unit C",
+      "home": "wqeqwe",
+      "room": "qwewqe",
+      "message": "qwewqeqwewqewqeqweqweqweqwe",
+      "clothes": [
+        {
+          "id": 1,
+          "title": "cardigan",
+          "image": "Shop/item2.png",
+          "color": "green",
+          "size": "xl",
+          "count": 1,
+          "price": 240.1,
+          "category": "cardigan"
+        },
+        {
+          "id": 2,
+          "title": "cardigan",
+          "image": "Shop/item2.png",
+          "color": "white",
+          "size": "s",
+          "count": 1,
+          "price": 120,
+          "category": "cardigan"
+        }
+      ],
+      "price": 360.1,
+      "user": "qwerty@email.ua",
+      "date": "2022-07-24T08:15:20.895Z",
+      "id": 11
+    },
+    {
+      "name": "qwertyuiopa",
+      "phone": "7856 761074",
+      "email": "qweqw@ffd.werew",
+      "contry": "wqewqq",
+      "city": "Birmingham",
+      "street": "916 E Elm St Unit C",
+      "home": "wqeqwe",
+      "room": "qwewqe",
+      "message": "qwewqeqwewqewqeqweqweqweqwe",
+      "clothes": [
+        {
+          "id": 1,
+          "title": "cardigan",
+          "image": "Shop/item2.png",
+          "color": "green",
+          "size": "xl",
+          "count": 1,
+          "price": 240.1,
+          "category": "cardigan"
+        },
+        {
+          "id": 2,
+          "title": "cardigan",
+          "image": "Shop/item2.png",
+          "color": "white",
+          "size": "s",
+          "count": 1,
+          "price": 120,
+          "category": "cardigan"
+        }
+      ],
+      "price": 360.1,
+      "user": "qwerty@email.ua",
+      "date": "2022-07-24T08:16:50.448Z",
+      "id": 12
+    },
+    {
+      "name": "qwe",
+      "phone": "123456",
+      "email": "qwerty@email.ua",
+      "contry": "wqewqq",
+      "city": "New York",
+      "street": "62 Mount Pleasant Rd",
+      "home": "wqeqwe",
+      "room": "qwewqe",
+      "message": "qwewqeqwewqewqeqweqweqweqwe",
+      "clothes": [
+        {
+          "id": 1,
+          "title": "cardigan",
+          "image": "Shop/item2.png",
+          "color": "green",
+          "size": "xl",
+          "count": 1,
+          "price": 240.1,
+          "category": "cardigan"
+        },
+        {
+          "id": 2,
+          "title": "cardigan",
+          "image": "Shop/item2.png",
+          "color": "white",
+          "size": "s",
+          "count": 3,
+          "price": 120,
+          "category": "cardigan"
+        }
+      ],
+      "price": 600.1,
+      "user": "qwerty@email.ua",
+      "date": "2022-07-24T08:17:32.202Z",
+      "id": 13
+    },
+    {
+      "name": "qwe",
+      "phone": "654321",
+      "email": "admin@gmail.com",
+      "contry": "wqewqq",
+      "city": "New York",
+      "street": "U 1 10 Springfield Ave ABN#64652016681 Code:PAID",
+      "home": "wqeqwe",
+      "room": "qwewqe",
+      "message": "qwewqeqwewqewqeqweqweqweqwe",
+      "clothes": [
+        {
+          "id": 2,
+          "title": "cardigan",
+          "image": "Shop/item2.png",
+          "color": "white",
+          "size": "s",
+          "count": 1,
+          "price": 120,
+          "category": "cardigan"
+        }
+      ],
+      "price": 120,
+      "user": "qwerty@email.ua",
+      "date": "2022-07-24T08:22:20.698Z",
+      "id": 14
+    },
+    {
+      "name": "Vladislav",
+      "phone": "123456",
+      "email": "efsf@efewf.re",
+      "contry": "wqewqq",
+      "city": "London",
+      "street": "62 Mount Pleasant Rd",
+      "home": "wqeqwe",
+      "room": "qwewqe",
+      "message": "qwewqeqwewqewqeqweqweqweqwe",
+      "clothes": [
+        {
+          "id": 2,
+          "title": "cardigan",
+          "image": "Shop/item2.png",
+          "color": "white",
+          "size": "s",
+          "count": 1,
+          "price": 120,
+          "category": "cardigan"
+        }
+      ],
+      "price": 120,
+      "user": "qwerty@email.ua",
+      "date": "2022-07-24T08:24:24.536Z",
+      "id": 15
     }
   ]
 }

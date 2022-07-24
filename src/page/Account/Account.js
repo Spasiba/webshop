@@ -27,14 +27,6 @@ const Account = () => {
       mode:"onBlur"
     })
 
-   /* useEffect(() => {
-      axios(`http://localhost:8080/users/${user.id}`)
-      .then(({data}) => {
-          setOrder(data.order[0].clothes)
-          console.log(data.order[0].clothes)
-          
-      })
-  },[user] )*/
 
     const changeUser =  (data) => {
 

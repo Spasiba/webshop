@@ -1,6 +1,6 @@
 
 import Layout from './Layout/Layout';
-import './app.css'
+import './App.css'
 import React, { Suspense } from 'react';
 import './i18n'
 

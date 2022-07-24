@@ -1,8 +1,11 @@
 {
   "name": "womazing",
+  "proxy": "http://localhost:8080",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@mui/icons-material": "^5.8.4",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -15,7 +18,9 @@
     "json-server": "^0.17.0",
     "json-server-auth": "^2.1.0",
     "node-sass": "^6.0.1",
+    "ra-data-simple-rest": "^4.2.4",
     "react": "^18.1.0",
+    "react-admin": "^4.2.4",
     "react-dom": "^18.1.0",
     "react-hook-form": "^7.32.0",
     "react-i18next": "^11.17.1",
@@ -27,7 +32,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "server": "json-server-auth --watch db.json --port 8080",
+    "server": "json-server-auth --watch db.json --port 8080 --middlewares ./range.js",
     "dev": "concurrently \"npm start\" \"npm run server\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
