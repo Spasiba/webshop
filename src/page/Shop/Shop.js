@@ -61,6 +61,7 @@ const Shop = () => {
             <button className="shop__button" type="button" onClick={() => setSort('big')}>к большему</button>
             <button className="shop__button" type="button" onClick={() => setSort('less')}>к меньшему</button>
             <button className="shop__button" type="button" onClick={() => setSort('sale')}>скидки</button>
+            <button className="shop__button" type="button" onClick={() => setSort('')}>Х</button>
           </div>
           <p className="">
             Показано: {shop.filter((item)=> sort === 'sale' ? item.priceSale :  (status === 'all') ? item : item.category === status).filter((item, idx) => {

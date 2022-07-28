@@ -24,6 +24,7 @@
     transition: .3s;
     background: black;
     color: white;
+    
 }
 
 .shop__row{
@@ -35,10 +36,16 @@
 .shop__card{
     width: calc(33.33333% - 20px);
     text-align: center;
+    padding: 2%;
 }
+
 .shop__card-img{
     height: 300px;
 
+}
+
+.shop__card:hover{
+    background-color: #6E9C9F;
 }
 
 

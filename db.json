@@ -553,33 +553,6 @@
       "id": 7
     },
     {
-      "name": "",
-      "phone": "",
-      "email": "",
-      "contry": "wqewqq",
-      "city": "London",
-      "street": "Flat 46, Blackburn Court Bollo Lane GB 365 6085 76 Code:Paid",
-      "home": "",
-      "room": "",
-      "message": "",
-      "clothes": [
-        {
-          "id": 2,
-          "title": "cardigan",
-          "image": "Shop/item2.png",
-          "color": "white",
-          "size": "s",
-          "count": 1,
-          "price": 150,
-          "category": "cardigan"
-        }
-      ],
-      "price": 150,
-      "user": "qwerty@email.ua",
-      "date": "2022-07-21T17:15:00.545Z",
-      "id": 8
-    },
-    {
       "name": "qwertyuiopa",
       "phone": "123456",
       "email": "qweqw@ffd.werew",

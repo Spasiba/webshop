@@ -24,6 +24,7 @@ a,ul,li{
 }
 
 @import "./Layout/Header/header.scss";
+@import "./Layout/Footer/footer.scss";
 @import "./page/Home/home.scss";
 @import "./page/Shop/shop.scss";
 @import "./page/Product/product.scss";

@@ -21,7 +21,6 @@ const Home = () => {
                     <h1 className="first-section__title" dangerouslySetInnerHTML={{__html: t("home.firstScreen.title")}}/>
                     <p className="first-section__subtitle"  dangerouslySetInnerHTML={{__html: t("home.firstScreen.subtitle")}}/>
                 <div className="first-section__buttons">
-                <button></button>
                 <button type="button" className="first-section__button"><NavLink to="/shop">{t("home.firstScreen.button")}</NavLink></button>
                 </div>
                 </div>
@@ -38,6 +37,7 @@ const Home = () => {
                 <div className="collection-section__btn">
                 <button type="button" className="collection-section__button"><NavLink to="/shop">{t("home.firstScreen.button")}</NavLink></button>
                 </div>
+                
             </div>
         </section>
         <section>

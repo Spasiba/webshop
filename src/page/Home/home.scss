@@ -90,6 +90,11 @@ color: #6E9C9F;
     row-gap: 20px;
     margin-top: 20px;
 }
+
+.card:hover{
+    background-color: #6E9C9F;
+    padding: 1%;
+}
 .card__title{
     font-family: 'Raleway';
     font-style: normal;

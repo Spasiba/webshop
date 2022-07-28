@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { List, Datagrid, DeleteButton, TextField, EditButton } from 'react-admin';
+import { List, Datagrid,DeleteButton, TextField, EditButton } from 'react-admin';
 
 
 const PostListClothes = (props) => {
