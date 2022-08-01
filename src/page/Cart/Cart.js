@@ -1,5 +1,5 @@
-import {useParams} from "react-router-dom"
-import React,{useEffect, useState, useContext} from 'react'
+
+import React,{ useContext} from 'react'
 import axios from "axios";
 import {CustomContext} from "../../Context";
 import { Link, NavLink } from 'react-router-dom';
@@ -9,11 +9,11 @@ import BasketCart from "./BasketCart";
 const Cart = () => {
   const {t} = useTranslation()
 
-  const {cart, delateCart, setCart, ticket,setTicket} = useContext(CustomContext)
+  const {cart, setCart, ticket,setTicket} = useContext(CustomContext)
 
   const useTicket = (e) => {
     e.preventDefault()
-    axios(`http://localhost:8080/tickets?title=${e.target[0].value}`)
+    axios(`https://womazings.herokuapp.com/api/tickets?title=${e.target[0].value}`)
     .then((data) => {
       if(data.data.length){
         setTicket(data.data)

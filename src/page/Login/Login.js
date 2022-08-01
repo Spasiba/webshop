@@ -8,8 +8,7 @@ const Login = () => {
 
   const {
     register,
-    handleSubmit,
-    reset
+    handleSubmit
   } = useForm ();
   
 

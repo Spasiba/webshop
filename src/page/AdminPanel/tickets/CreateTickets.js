@@ -1,5 +1,5 @@
 import React from 'react'
-import {  Create, ImageField, ImageInput, NumberInput, SelectArrayInput, SelectInput, SimpleForm, TextInput } from 'react-admin';
+import {  Create,  NumberInput,  SimpleForm, TextInput } from 'react-admin';
 
 const CreateTickets = (props) => {
   return (

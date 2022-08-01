@@ -1,22 +1,21 @@
 
-import React,{useContext, useEffect, useState} from 'react'
+import React,{useContext, useState} from 'react'
 import { CustomContext } from '../../Context'
 import { useTranslation } from 'react-i18next'
 import {Link, NavLink} from "react-router-dom"
 import {useForm} from "react-hook-form"
 import axios from 'axios'
-import { message } from 'antd'
+
 
 const Account = () => {
     const {t} = useTranslation()
-    const {user, setUser, order, setOrder} = useContext(CustomContext)
+    const {user, setUser} = useContext(CustomContext)
     const [change, setChange] = useState(false)
     const [passwordChange, setPasswordChange] = useState(false)
     const [view,setView] = useState('history')
 
 
     const {
-      reset,
       register,
       handleSubmit,
       formState: {
@@ -30,7 +29,7 @@ const Account = () => {
 
     const changeUser =  (data) => {
 
-        axios.patch(`http://localhost:8080/users/${user.id}`, data)
+        axios.patch(`https://womazings.herokuapp.com/api/users/${user.id}`, data)
         .then(({data}) => {
           setUser(data)
           localStorage.setItem('user',JSON.stringify(data))
@@ -40,7 +39,7 @@ const Account = () => {
     }
 
     const changePassword =  (data) => {
-      axios.patch(`http://localhost:8080/users/${user.id}`, {password: data.password})
+      axios.patch(`https://womazings.herokuapp.com/api/users/${user.id}`, {password: data.password})
       .then(() => setPasswordChange(false))
 
   }

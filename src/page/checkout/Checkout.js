@@ -1,4 +1,4 @@
-import React,{useEffect, useState, useContext} from 'react'
+import React,{ useContext} from 'react'
 import axios from "axios";
 import {CustomContext} from "../../Context";
 import { Link, NavLink, useNavigate } from 'react-router-dom';
@@ -10,12 +10,12 @@ const Checkout = () => {
 
     const navigate = useNavigate()
 
-    const {cart,ticket,user,setCart, setTicket, setUser, setOrder} = useContext(CustomContext)
+    const {cart,ticket,user,setCart, setTicket, setUser} = useContext(CustomContext)
 
     const {reset, register, handleSubmit} = useForm()
 
     const addOrder = async (data) => {
-       await axios.post('http://localhost:8080/orders', {
+       await axios.post('https://womazings.herokuapp.com/api/orders', {
             ...data,
             clothes: cart,
             price: Array.isArray(ticket) && ticket.length
@@ -25,7 +25,7 @@ const Checkout = () => {
             date: new Date() 
         }).then(() => console.log('Success'))
 
-        await axios.patch(`http://localhost:8080/users/${user.id}`, {
+        await axios.patch(`https://womazings.herokuapp.com/api/users/${user.id}`, {
             orders: [
                 ...user.orders,
                 {
@@ -41,12 +41,12 @@ const Checkout = () => {
             ],}
         ).then(() => console.log('Success'))
 
-        await axios(`http://localhost:8080/users/${user.id}`).then((res) => setUser(res.data))
+        await axios(`https://womazings.herokuapp.com/api/users/${user.id}`).then((res) => setUser(res.data))
 
         await Array.isArray(ticket) && ticket.length && ticket[0].count > 1 ? 
-            axios.patch(`http://localhost:8080/tickets/${ticket[0].id}`, {count: ticket[0].count - 1 })
+            axios.patch(`https://womazings.herokuapp.com/api/tickets/${ticket[0].id}`, {count: ticket[0].count - 1 })
                 .then(() => console.log('use ticket'))
-            : Array.isArray(ticket) && ticket.length && ticket[0].count === 1 ? axios.delete(`http://localhost:8080/tickets/${ticket[0].id}`).then(() => console.log('success delate ticket')) 
+            : Array.isArray(ticket) && ticket.length && ticket[0].count === 1 ? axios.delete(`https://womazings.herokuapp.com/api/tickets/${ticket[0].id}`).then(() => console.log('success delate ticket')) 
                 : console.log('error')
 
         await reset()

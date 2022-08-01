@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useContext, useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
-import { Link, Navigate, NavLink, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { CustomContext } from '../../Context';
 import CreateColors from './CreateColors';
 import CreateSize from './CreateSize';
@@ -18,10 +18,10 @@ const CreateProduct = () => {
 
     const [colors, setColors] = useState('')
 
-    const {register, reset, handleSubmit} = useForm()
+    const {register, handleSubmit} = useForm()
 
     const createProduct = (data) => {
-        axios.post('http://localhost:8080/clothes', {
+        axios.post('https://womazings.herokuapp.com/api/clothes', {
             ...data,
             colors,
             sizes,

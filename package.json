@@ -1,6 +1,5 @@
 {
   "name": "womazing",
-  "proxy": "http://localhost:8080",
   "version": "0.1.0",
   "engines": {
     "node":"16.13.1",
@@ -35,9 +34,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server",
+    "client": "react-scripts start",
     "server": "json-server-auth --watch db.json --port 8080 --middlewares ./range.js",
-    "dev": "concurrently \"npm start\" \"npm run server\"",
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

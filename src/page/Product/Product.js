@@ -4,7 +4,6 @@ import axios from "axios";
 import {CustomContext} from "../../Context";
 import { Link, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next'
-import userEvent from "@testing-library/user-event";
 import { useForm } from "react-hook-form";
 import CreateColors from "../CreateProduct/CreateColors";
 import CreateSize from "../CreateProduct/CreateSize";
@@ -13,7 +12,7 @@ const Product = () => {
     const {t} = useTranslation();
     const params = useParams()
     const location = useLocation()
-    const {register, reset, handleSubmit} = useForm()
+    const {register, handleSubmit} = useForm()
     
     const [count, setCount] = useState(1)
     const [color, setColor] = useState('')
@@ -24,12 +23,12 @@ const Product = () => {
     const [change, setChange] = useState(false)
 
 
-    const {shop, page, setPage, status, setStatus, addCart, product, setProduct,user,getAllClothes} = useContext(CustomContext)
+    const {shop, setPage, setStatus, addCart, product, setProduct,user,getAllClothes} = useContext(CustomContext)
     const [sizes, setSizes] = useState('')
     const [colors, setColors] = useState('')
 
     useEffect(() => {
-        axios(`http://localhost:8080/clothes/${params.id}`)
+        axios(`https://womazings.herokuapp.com/api/clothes/${params.id}`)
         .then(({data}) => {
             setProduct(data)
             setColor(data.colors[0])
@@ -39,7 +38,7 @@ const Product = () => {
 
     const changeProduct =  (data) => {
 
-        axios.patch(`http://localhost:8080/clothes/${product.id}`, {
+        axios.patch(`https://womazings.herokuapp.com/api/clothes/${product.id}`, {
             ...data,
         })
         .then(({data}) => {
@@ -80,7 +79,7 @@ const Product = () => {
                             {sale? <input type="number" value={saleCount} onChange={(e)=>setSaleCount(e.target.value)}/> : ''}
                              <button type="button" onClick={() => {
                                 if (sale){
-                                    axios.patch(`http://localhost:8080/clothes/${product.id}`, {priceSale: product.price - product.price / 100 * saleCount})
+                                    axios.patch(`https://womazings.herokuapp.com/api/clothes/${product.id}`, {priceSale: product.price - product.price / 100 * saleCount})
                                     .then(() =>{
                                         getAllClothes()
                                         setSaleCount(0)

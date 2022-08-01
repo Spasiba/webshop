@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { List, Datagrid, DeleteButton, TextField, EditButton, SelectField } from 'react-admin';
+import { List, Datagrid, DeleteButton, TextField } from 'react-admin';
 
 
 const PostListOrders = (props) => {

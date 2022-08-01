@@ -1,15 +1,14 @@
-import axios from 'axios'
+
 import React,{useContext} from 'react'
 import { CustomContext } from '../../Context'
 import { useForm } from 'react-hook-form'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Register = () => {
 
     const {registerUser}=useContext(CustomContext)
  
     const {
-        reset,
         register,
         handleSubmit,
         formState: {

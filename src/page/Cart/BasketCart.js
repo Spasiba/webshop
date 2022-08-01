@@ -1,7 +1,6 @@
 import React,{useContext, useState} from 'react'
 import {CustomContext} from "../../Context";
-import { Link, NavLink } from 'react-router-dom';
-import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom';
 
 
 const BasketCart = ({item}) => {

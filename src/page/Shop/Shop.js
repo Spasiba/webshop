@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { initReactI18next, useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 import { Link, NavLink } from 'react-router-dom';
 import { CustomContext } from '../../Context';
 import { LazyLoadImage } from 'react-lazy-load-image-component';

@@ -17,7 +17,7 @@ export const Context = (props) =>{
     const [ticket,setTicket] = useState([])
 
     const getAllClothes = () => {
-        axios('http://localhost:8080/clothes')
+        axios('https://womazings.herokuapp.com/api/clothes')
        .then(({data}) => setShop(data))
     }
 
@@ -81,7 +81,7 @@ export const Context = (props) =>{
     },[cart])
 
     const registerUser = (data) => {
-        axios.post('http://localhost:8080/register', {...data, orders:[]})
+        axios.post('https://womazings.herokuapp.com/api/register', {...data, orders:[]})
             .then((res) => {
                 localStorage.setItem('user', JSON.stringify(res.data.user))
                 setUser(res.data.user)
@@ -90,7 +90,7 @@ export const Context = (props) =>{
        }
 
        const loginUser = (data) => {
-        axios.post('http://localhost:8080/login', data)
+        axios.post('https://womazings.herokuapp.com/api/login', data)
             .then((res)=>{
                 localStorage.setItem('user', JSON.stringify(res.data.user))
                 setUser(res.data.user)

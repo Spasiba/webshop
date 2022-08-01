@@ -15,7 +15,7 @@ import PostListOrders from './orders/PostListOrders';
 const AdminPanel = () => {
   return (
     <section >
-        <Admin dataProvider={restProvider('http://localhost:3000')}>
+        <Admin dataProvider={restProvider('https://womazings.herokuapp.com')}>
           <Resource edit={EditClothes} name="clothes" list={PostListClothes} create={CreateClothes} />
           <Resource  name="users" list={PostListUsers} edit={EditUsers} />
           <Resource  name="tickets" list={PostListTickets} edit={EditTickets} create={CreateTickets}/>
