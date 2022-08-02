@@ -2,8 +2,8 @@
   "name": "womazing",
   "version": "0.1.0",
   "engines": {
-    "node":"16.13.1",
-    "npm":"8.1.2"
+    "node": "16.13.1",
+    "npm": "8.1.2"
   },
   "private": true,
   "dependencies": {
@@ -15,6 +15,7 @@
     "antd": "^4.21.3",
     "axios": "^0.27.2",
     "concurrently": "^7.2.1",
+    "cors": "^2.8.5",
     "i18next": "^21.8.9",
     "i18next-browser-languagedetector": "^6.1.4",
     "i18next-http-backend": "^1.4.1",
